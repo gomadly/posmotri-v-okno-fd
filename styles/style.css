@@ -8,6 +8,38 @@ html {
   block-size: 100%;
 }
 
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+blockquote,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* Кастомный скроллбар */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgb(217 217 217 / 10%);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #d9d9d9;
+}
+
 .page {
   display: flex;
   justify-content: center;
@@ -26,8 +58,8 @@ html {
   grid-template-columns: 1fr 1fr;
   align-items: end;
   min-width: 1140px;
-  min-height: 534px;
   grid-gap: 30px;
+  margin: 133px 30px;
 }
 
 .result__video-container {
@@ -45,27 +77,25 @@ html {
 .search-form {
   display: flex;
   justify-content: space-between;
-  height: 54px;
   margin-bottom: 3px;
 }
 
 .search-form__fieldset-title {
   padding-bottom: 5px;
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
 }
 
 .search-form__fieldset {
   width: 212px;
-  height: 49px;
   border-width: 0;
 }
 
 .search-form__label {
   display: flex;
   align-items: center;
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
 }
@@ -78,7 +108,7 @@ html {
 }
 
 .title {
-  font-family: oswald;
+  font-family: "oswald", sans-serif;
   font-weight: 700;
   font-size: 75px;
   line-height: 94%;
@@ -130,7 +160,7 @@ html {
 .content__video-card-title {
   max-width: 199px;
   overflow: hidden;
-  font-family: oswald;
+  font-family: "oswald", sans-serif; 
   font-weight: 700;
   font-size: 30px;
   line-height: 100%;
@@ -143,7 +173,7 @@ html {
   max-width: 200px;
   max-height: 65px;
   overflow: hidden;
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 16.2px;
@@ -159,7 +189,7 @@ html {
 }
 
 .content__accent {
-  opacity: 0.2;
+  color: #545050;
 }
 
 .visually-hidden {
@@ -176,8 +206,9 @@ html {
   width: 225px;
   border-width: 1px 0px 1px 0;
   border-color: white;
+  Border-style: solid;
   color: white;
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
   background-color: transparent;
@@ -227,31 +258,28 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
   padding-right: 15px;
 }
 
-.search-form__label:hover {
+.search-form__label:hover .search-form__label-text { 
   text-decoration: underline;
   cursor: pointer;
-}
+} 
 
 .button {
   color: white;
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 700;
   font-size: 18px;
+  width: 100%;
+  height: 34px;
+  margin-top: 30px;
+  border: 1px solid white;
+  background-color: transparent;
 }
 
 .search-form__submit-button {
   width: 194px;
   height: 34px;
   margin-top: 21px;
-  border: 1px solid white;
-  background-color: transparent;
-}
-
-.more-button {
-  width: 100%;
-  height: 34px;
-  margin-top: 30px;
-  border: 1px solid white;
+  border: 1px solid currentColor;
   background-color: transparent;
 }
 
@@ -264,8 +292,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
   background-color: #545050;
 }
 
-.content__video-card:hover .content__video-card-title,
-.content__video-card:hover .content__video-card-description {
+.content__card-link:hover {
   text-decoration: underline;
   cursor: pointer;
 }
@@ -280,36 +307,4 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
 
 .content__card-link:focus-visible {
   outline: 1px solid white;
-}
-
-h1,
-h2,
-h3,
-h4,
-p,
-ul,
-ol,
-li,
-blockquote,
-fieldset {
-  margin: 0;
-  padding: 0;
-}
-
-ul,
-ol {
-  list-style: none;
-}
-
-/* Кастомный скроллбар */
-.custom-scrollbar::-webkit-scrollbar {
-  width: 4px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: rgb(217 217 217 / 10%);
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #d9d9d9;
 }
